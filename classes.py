@@ -17,6 +17,7 @@ class Pessoa():
         self.sexo = sexo
         self.estado_civil = estado_civil
         self.conjulge = conjulge
+
 ## Métodos
     def casar(self,pessoa):
         if (self.estado_civil == "Solteiro(a)" or self.estado_civil == "Divorciado(a)") and (pessoa.estado_civil == "Solteiro(a)" or pessoa.estado_civil == "Divorciado(a)"):
@@ -37,3 +38,11 @@ class Pessoa():
             print(f"{self.nome} se divorciou de {conjulge.nome}")
         else:
             print("Não é possível divorciar")
+
+## Criando um objeto pessoa
+p1 = Pessoa("João", 25, "Masculino")
+p2 = Pessoa("Maria", 25, "Feminino")
+p3 = Pessoa("Ana", 25, "Feminino")
+
+p1.casar(p2)
+p1.casar(p3)
